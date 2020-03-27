@@ -3,8 +3,8 @@ const cors = require('cors');
 const routes = require('./routes');
 const app = express();
 
-//Permite que o node converta o json da requisição para um objeto javascript
 app.use(cors());
+//Permite que o node converta o json da requisição para um objeto javascript
 app.use(express.json());
 app.use(routes);
 /**
