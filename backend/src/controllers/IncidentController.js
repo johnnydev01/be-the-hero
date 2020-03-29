@@ -41,7 +41,7 @@ module.exports = {
     },
 
     async delete(request, response) {
-        const { ong_id } = request.headers.authorization;
+        const  ong_id  = request.headers.authorization;
         const { id } = request.params;
 
         const incident = await connection('incidents')
