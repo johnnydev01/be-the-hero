@@ -2,11 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const routes = require('./routes');
 const app = express();
-
+const { errors } = require('celebrate');
 app.use(cors());
 //Permite que o node converta o json da requisição para um objeto javascript
 app.use(express.json());
 app.use(routes);
+app.use(errors()); 
 /**
  * Rota / Recurso
  */
